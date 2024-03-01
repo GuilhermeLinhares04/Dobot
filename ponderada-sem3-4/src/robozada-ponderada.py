@@ -1,13 +1,17 @@
+# Instalando bibliotecas
 from serial.tools import list_ports
 import inquirer
 import typer
 import pydobot
 from yaspin import yaspin
 
+# Criando um spinner
 spinner = yaspin(text="Carregando...", color="white", spinner="dots12", side="right")
 
+# Criando um app com o typer
 app = typer.Typer()
 
+# Lista as portas seriais disponíveis
 available_ports = list_ports.comports()
 
 # Pede para o usuário escolher uma das portas disponíveis
